@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jquery.js"></script>
+<script src="userdetails.js"></script>
+<style>
+    .frm-err{
+        display: none;
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="box">
+                <form  id="user-details" method="POST">
+                    <div class="bform-group">
+
+                        <label for="firstName">FirstName</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter your FirstName"/>
+                        <span id="firstname_err" class="frm-error">Please enter valid name!</span>
+                    </div>
+                    <div class="bform-group">
+
+                    <label for="lastName">LastName</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Enter your LastName"/>
+                    <span id="lastname_err" class="frm-error">Please enter valid name!</span>
+
+                    </div>
+                    <div class="bform-group">
+
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date" name="dob" id="dob"/>
+                    </div>
+                    <div class="bform-group">
+
+                    <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">-- select --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="bform-group">
+                        <button value="submit" id="submit" class="btn btn-primary">Submit</button>
+                        <button value="reset" id="reset" class="btn btn-primary">Cancel</button>
+
+                    </div>
+                </form>
+            </div>
+            <div>
+                <div id="results">
+                    <table id="user_data">
+                        
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
